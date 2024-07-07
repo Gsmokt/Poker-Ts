@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependecies
-        run: npi ci
+        run: npm ci
       - name: Install ts
         run: npm i -D typescript
       - name: Install concurrently
