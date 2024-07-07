@@ -1,0 +1,20 @@
+name: Poker
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependecies
+        run: npi ci
+      - name: Install ts
+        run: npm i -D typescript
+      - name: Install concurrently
+        run: npm i -D concurrently
+      - name: Run code
+        run: npm run go
