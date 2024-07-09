@@ -5,7 +5,7 @@ class Deck {
   cardValue: { [index: string]: number } = cardValue;
   rank: { [index: string]: number } = rank;
   createDeck() {
-    this.hand = new Hand().createDesck(this.cardValue);
+    this.hand = Hand.createDesck(this.cardValue);
   }
   result() {
     // Check all ranks
@@ -23,7 +23,7 @@ class Deck {
         ? truth++
         : null;
     }
-    return new Search().pull(
+    return Search.pull(
       this.cardValue,
       this.hand,
       truth,

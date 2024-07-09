@@ -3,7 +3,7 @@ import { Card } from "./card";
 export class Search {
   constructor() {}
 
-  pull(
+  static pull(
     cardValue: { [index: string]: number },
     hand: Array<Card>,
     truth: number,
